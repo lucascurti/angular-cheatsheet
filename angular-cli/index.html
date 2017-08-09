@@ -1,0 +1,922 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.8.0">
+    
+    
+      
+        <title>Angular CLI - Angular Extended Cheat Sheet</title>
+      
+    
+    
+      <script src="../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application-bfecc7305d.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-02c2a4388f.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="red" data-md-color-accent="red">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href=".." title="Angular Extended Cheat Sheet" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+            
+            Angular CLI
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
+    Angular Extended Cheat Sheet
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../component/" title="@Component" class="md-nav__link">
+      @Component
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../ngModules/" title="@ngModule(s)" class="md-nav__link">
+      @ngModule(s)
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../built-in-directives/" title="Built-in Directives" class="md-nav__link">
+      Built-in Directives
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../template-syntax/" title="Template Syntax" class="md-nav__link">
+      Template Syntax
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../pipes/" title="Pipes" class="md-nav__link">
+      Pipes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../interfaces/" title="Interfaces" class="md-nav__link">
+      Interfaces
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../lifecycle-hooks/" title="Lifecycle Hooks" class="md-nav__link">
+      Lifecycle Hooks
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../class-field-decorators/" title="Class field decorators" class="md-nav__link">
+      Class field decorators
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../communicating-btw-components/" title="Communicating Between Components" class="md-nav__link">
+      Communicating Between Components
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../services/" title="Services and Dependency Injection" class="md-nav__link">
+      Services and Dependency Injection
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../http/" title="Getting Data With HTTP" class="md-nav__link">
+      Getting Data With HTTP
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../routing/" title="Routing & Navigation" class="md-nav__link">
+      Routing & Navigation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../forms/" title="Forms" class="md-nav__link">
+      Forms
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Angular CLI
+      </label>
+    
+    <a href="./" title="Angular CLI" class="md-nav__link md-nav__link--active">
+      Angular CLI
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing-angular-cli" title="Installing Angular CLI" class="md-nav__link">
+    Installing Angular CLI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-and-runnning-a-new-angular-application" title="Creating and Runnning a New Angular Application" class="md-nav__link">
+    Creating and Runnning a New Angular Application
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-features" title="Adding Features" class="md-nav__link">
+    Adding Features
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-new-class" title="Adding a new Class" class="md-nav__link">
+    Adding a new Class
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-new-component" title="Adding a new Component" class="md-nav__link">
+    Adding a new Component
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-new-directive" title="Adding a new Directive" class="md-nav__link">
+    Adding a new Directive
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-new-enum" title="Adding a new enum" class="md-nav__link">
+    Adding a new enum
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-new-module" title="Adding a new Module" class="md-nav__link">
+    Adding a new Module
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-new-pipe" title="Adding a new Pipe" class="md-nav__link">
+    Adding a new Pipe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-new-service" title="Adding a new Service" class="md-nav__link">
+    Adding a new Service
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tests" title="Tests" class="md-nav__link">
+    Tests
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#running-unit-tests" title="Running Unit Tests" class="md-nav__link">
+    Running Unit Tests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-end-to-end-e2e-tests" title="Running End-to-end (E2E) Tests" class="md-nav__link">
+    Running End-to-end (E2E) Tests
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-app-for-production" title="Building App for Production" class="md-nav__link">
+    Building App for Production
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#targets" title="Targets" class="md-nav__link">
+    Targets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environments" title="Environments" class="md-nav__link">
+    Environments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../3rd-party/" title="3rd Party Library Installation" class="md-nav__link">
+      3rd Party Library Installation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../misc/" title="Miscellaneous" class="md-nav__link">
+      Miscellaneous
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing-angular-cli" title="Installing Angular CLI" class="md-nav__link">
+    Installing Angular CLI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-and-runnning-a-new-angular-application" title="Creating and Runnning a New Angular Application" class="md-nav__link">
+    Creating and Runnning a New Angular Application
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-features" title="Adding Features" class="md-nav__link">
+    Adding Features
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-new-class" title="Adding a new Class" class="md-nav__link">
+    Adding a new Class
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-new-component" title="Adding a new Component" class="md-nav__link">
+    Adding a new Component
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-new-directive" title="Adding a new Directive" class="md-nav__link">
+    Adding a new Directive
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-new-enum" title="Adding a new enum" class="md-nav__link">
+    Adding a new enum
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-new-module" title="Adding a new Module" class="md-nav__link">
+    Adding a new Module
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-new-pipe" title="Adding a new Pipe" class="md-nav__link">
+    Adding a new Pipe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-new-service" title="Adding a new Service" class="md-nav__link">
+    Adding a new Service
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tests" title="Tests" class="md-nav__link">
+    Tests
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#running-unit-tests" title="Running Unit Tests" class="md-nav__link">
+    Running Unit Tests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-end-to-end-e2e-tests" title="Running End-to-end (E2E) Tests" class="md-nav__link">
+    Running End-to-end (E2E) Tests
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-app-for-production" title="Building App for Production" class="md-nav__link">
+    Building App for Production
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#targets" title="Targets" class="md-nav__link">
+    Targets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environments" title="Environments" class="md-nav__link">
+    Environments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Angular CLI</h1>
+                
+                <p>Angular CLI is a Command Line Interface (CLI) to automate your development workflow. It allows you to:</p>
+<ul>
+<li>create a new Angular application</li>
+<li>run a development server with LiveReload support to preview your application during development</li>
+<li>add features to your existing Angular application</li>
+<li>run your application’s unit tests</li>
+<li>run your application’s end-to-end (E2E) tests</li>
+<li>build your application for deployment to production</li>
+</ul>
+<p>Angular CLI does not just blindly generate code for you. It uses static analysis to better understand the semantics of your application. For example, when adding a new component using <code>ng generate component</code>, Angular CLI finds the closest module in the module tree of your application and integrates the new feature in that module. So if you have an application with multiple modules, Angular CLI will automatically integrate the new feature in the correct module, depending on the directory where you run the command from.</p>
+<h3 id="installing-angular-cli">Installing Angular CLI</h3>
+<div class="codehilite"><pre><span></span>$ npm install -g @angular/cli
+</pre></div>
+
+
+<h2 id="creating-and-runnning-a-new-angular-application">Creating and Runnning a New Angular Application</h2>
+<p>There are two ways to create a new application using Angular CLI:</p>
+<ul>
+<li><code>ng init</code>: create a new application in the current directory</li>
+<li><code>ng new</code>: create a new directory and run <code>ng init</code> inside the new directory</li>
+</ul>
+<p>So <code>ng new</code> is similar to <code>ng init</code> except that it also creates a directory for you.</p>
+<div class="codehilite"><pre><span></span>$ ng new my-app
+</pre></div>
+
+
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>--dry-run</code>: boolean, default <code>false</code>, perform dry-run so no changes are written to filesystem</li>
+<li><code>--verbose</code>: boolean, default <code>false</code></li>
+<li><code>--link-cli</code>: boolean, default <code>false</code>, automatically link the <code>@angular/cli</code> package (<a href="https://github.com/angular/angular-cli#development-hints-for-hacking-on-angular-cli">more info</a>)</li>
+<li><code>--skip-install</code>: boolean, default <code>false</code>, skip <code>npm install</code></li>
+<li><code>--skip-git</code>: boolean, default <code>false</code>, don’t initialize git repository</li>
+<li><code>--skip-tests</code>: boolean, default <code>false</code>, skip creating tests</li>
+<li><code>--skip-commit</code>: boolean, default <code>false</code>, skip committing the first git commit</li>
+<li><code>--directory</code>: string, name of directory to create, by default this is the same as the application name</li>
+<li><code>--source-dir</code>: string, default <code>'src'</code>, name of source directory</li>
+<li><code>--style</code>: string, default <code>'css'</code>, the style language to use (<code>'css'</code>, <code>'less'</code> or <code>'scss'</code>)</li>
+<li><code>--prefix</code>: string, default <code>'app'</code>, the prefix to use when generating new components</li>
+<li><code>--mobile</code>: boolean, default <code>false</code>, generate a Progressive Web App application</li>
+<li><code>--routing</code>: boolean, default <code>false</code>, add module with routing information and import it in main app module</li>
+<li><code>--inline-style</code>: boolean, default <code>false</code>, use inline styles when generating the new application</li>
+<li><code>--inline-template</code>: boolean, default <code>false</code>, use inline templates when generating the new application</li>
+</ul>
+<p><strong>To run the app:</strong></p>
+<div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> my-app
+$ ng serve
+</pre></div>
+
+
+<h2 id="adding-features">Adding Features</h2>
+<ul>
+<li><code>ng generate class my-new-class</code>: add a class to your application</li>
+<li><code>ng generate component my-new-component</code>: add a component to your application</li>
+<li><code>ng generate directive my-new-directive</code>: add a directive to your application</li>
+<li><code>ng generate enum my-new-enum</code>: add an enum to your application</li>
+<li><code>ng generate module my-new-module</code>: add a module to your application</li>
+<li><code>ng generate pipe my-new-pipe</code>: add a pipe to your application</li>
+<li><code>ng generate service my-new-service</code>: add a service to your application</li>
+</ul>
+<p>The <code>generate</code> command and the different sub-commands also have shortcut notations, so the following commands are similar:</p>
+<ul>
+<li><code>ng g cl my-new-class</code>: add a class to your application</li>
+<li><code>ng g c my-new-component</code>: add a component to your application</li>
+<li><code>ng g d my-new-directive</code>: add a directive to your application</li>
+<li><code>ng g e my-new-enum</code>: add an enum to your application</li>
+<li><code>ng g m my-new-module</code>: add a module to your application</li>
+<li><code>ng g p my-new-pipe</code>: add a pipe to your application</li>
+<li><code>ng g s my-new-service</code>: add a service to your application</li>
+</ul>
+<p>Run <code>$ ng generate --help</code> to see all available options of your locally installed Angular CLI.</p>
+<h3 id="adding-a-new-class">Adding a new Class</h3>
+<div class="codehilite"><pre><span></span>$ ng generate class user-profile
+</pre></div>
+
+
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>--spec</code>: boolean, default <code>false</code>, generate spec file with unit test</li>
+</ul>
+<h3 id="adding-a-new-component">Adding a new Component</h3>
+<div class="codehilite"><pre><span></span>$ ng generate component site-header
+</pre></div>
+
+
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>--flat</code>: boolean, default <code>false</code>, generate component files in <code>src/app</code> instead of <code>src/app/site-header</code></li>
+<li><code>--inline-template</code>: boolean, default <code>false</code>, use an inline template instead of a separate HTML file</li>
+<li><code>--inline-style</code>: boolean, default <code>false</code>, use inline styles instead of a separate CSS file</li>
+<li><code>--prefix</code>: boolean, default <code>true</code>, use prefix specified in <code>.angular-cli.json</code> in component selector</li>
+<li><code>--spec</code>: boolean, default <code>true</code>, generate spec file with unit test</li>
+<li><code>--view-encapsulation</code>: string, specifies the view encapsulation strategy</li>
+<li><code>--change-detection</code>: string, specifies the change detection strategy</li>
+</ul>
+<h3 id="adding-a-new-directive">Adding a new Directive</h3>
+<div class="codehilite"><pre><span></span>$ ng generate directive admin-link
+</pre></div>
+
+
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>--flat</code>: boolean, default <code>true</code>, generate directive files in <code>src/app</code> instead of <code>src/app/admin-link</code></li>
+<li><code>--prefix</code>: boolean, default <code>true</code>, use prefix specified in <code>.angular-cli.json</code> in directive selector</li>
+<li><code>--spec</code>: boolean, default <code>true</code>, generate spec file with unit test</li>
+</ul>
+<h3 id="adding-a-new-enum">Adding a new enum</h3>
+<div class="codehilite"><pre><span></span>$ ng generate enum direction
+</pre></div>
+
+
+<h3 id="adding-a-new-module">Adding a new Module</h3>
+<div class="codehilite"><pre><span></span>$ ng generate module admin
+</pre></div>
+
+
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>--routing</code>: boolean, default <code>false</code>, generate an additional module <code>AdminRoutingModule</code> with just the routing information and add it as an import to your new module</li>
+<li><code>--spec</code>: boolean, default <code>false</code>, add <code>src/app/admin/admin.module.spec.ts</code> with a unit test that checks whether the module exists</li>
+</ul>
+<h3 id="adding-a-new-pipe">Adding a new Pipe</h3>
+<div class="codehilite"><pre><span></span>$ ng generate pipe convert-to-euro
+</pre></div>
+
+
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>--flat</code>: boolean, default <code>true</code>, generate component files in <code>src/app</code> instead of <code>src/app/convert-to-euro</code></li>
+<li><code>--spec</code>: boolean, default <code>true</code>, generate spec file with unit test</li>
+</ul>
+<h3 id="adding-a-new-service">Adding a new Service</h3>
+<div class="codehilite"><pre><span></span>$ ng generate service backend-api
+</pre></div>
+
+
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>--flat</code>: boolean, default <code>true</code>, generate service file in <code>src/app</code> instead of <code>src/app/backend-api</code></li>
+<li><code>--spec</code>: boolean, default <code>true</code>, generate spec file with unit test</li>
+</ul>
+<h2 id="tests">Tests</h2>
+<h3 id="running-unit-tests">Running Unit Tests</h3>
+<div class="codehilite"><pre><span></span>$ ng <span class="nb">test</span>
+</pre></div>
+
+
+<h3 id="running-end-to-end-e2e-tests">Running End-to-end (E2E) Tests</h3>
+<div class="codehilite"><pre><span></span>$ ng e2e
+</pre></div>
+
+
+<h2 id="building-app-for-production">Building App for Production</h2>
+<p>Running <code>ng serve</code> builds and bundles your Angular application automatically to a virtual filesystem during development.</p>
+<p>However, when your application is ready for production, you will need real files that you can deploy to your server or to the cloud.</p>
+<p>To build and bundle your application for deployment, run:</p>
+<div class="codehilite"><pre><span></span>$ ng build
+</pre></div>
+
+
+<p><strong>Options:</strong></p>
+<ul>
+<li><code>--aot</code>: enable ahead-of-time compilation</li>
+<li><code>--base-href</code>: string, the base href to use in the index file</li>
+<li><code>--environment</code>: string, default <code>dev</code>, environment to use</li>
+<li><code>--output-path</code>: string, directory to write the output to</li>
+<li><code>--target</code>: string, default <code>development</code>, environment to use</li>
+<li><code>--watch</code>: boolean, default <code>false</code>, watch files for changes and rebuild when a change is detected</li>
+</ul>
+<h3 id="targets">Targets</h3>
+<p>Specifying a target impacts the way the build process operates. Its value can be one of the following:</p>
+<ul>
+<li><code>development</code>: default mode, do not minify or uglify code</li>
+<li><code>production</code>: minify and uglify code</li>
+</ul>
+<h3 id="environments">Environments</h3>
+<p>Environments let you specify settings to customize your application behavior.</p>
+<p>You can define your own environments in the <code>.angular-cli.json</code> file. The default ones are:</p>
+<ul>
+<li><code>source</code>: use settings defined in <code>environments/environment.ts</code></li>
+<li><code>dev</code>: use settings defined in <code>environments/environment.ts</code></li>
+<li><code>prod</code>: use settings defined in <code>environments/environment.prod.ts</code></li>
+</ul>
+<p>The Angular CLI section is an excerpt from <a href="https://www.sitepoint.com/ultimate-angular-cli-reference/">www.sitepoint.com/ultimate-angular-cli-reference/</a> by Jurgen Van de Moere (<a href="https://twitter.com/jvandemo">@jvandemo</a>).</p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../forms/" title="Forms" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Forms
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../3rd-party/" title="3rd Party Library Installation" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                3rd Party Library Installation
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application-1d6ee6ee6c.js"></script>
+      
+      
+      <script>app.initialize({url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

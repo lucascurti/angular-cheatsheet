@@ -1,0 +1,1065 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.8.0">
+    
+    
+      
+        <title>Forms - Angular Extended Cheat Sheet</title>
+      
+    
+    
+      <script src="../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application-bfecc7305d.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-02c2a4388f.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="red" data-md-color-accent="red">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href=".." title="Angular Extended Cheat Sheet" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+            
+            Forms
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
+    Angular Extended Cheat Sheet
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../component/" title="@Component" class="md-nav__link">
+      @Component
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../ngModules/" title="@ngModule(s)" class="md-nav__link">
+      @ngModule(s)
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../built-in-directives/" title="Built-in Directives" class="md-nav__link">
+      Built-in Directives
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../template-syntax/" title="Template Syntax" class="md-nav__link">
+      Template Syntax
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../pipes/" title="Pipes" class="md-nav__link">
+      Pipes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../interfaces/" title="Interfaces" class="md-nav__link">
+      Interfaces
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../lifecycle-hooks/" title="Lifecycle Hooks" class="md-nav__link">
+      Lifecycle Hooks
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../class-field-decorators/" title="Class field decorators" class="md-nav__link">
+      Class field decorators
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../communicating-btw-components/" title="Communicating Between Components" class="md-nav__link">
+      Communicating Between Components
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../services/" title="Services and Dependency Injection" class="md-nav__link">
+      Services and Dependency Injection
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../http/" title="Getting Data With HTTP" class="md-nav__link">
+      Getting Data With HTTP
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../routing/" title="Routing & Navigation" class="md-nav__link">
+      Routing & Navigation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Forms
+      </label>
+    
+    <a href="./" title="Forms" class="md-nav__link md-nav__link--active">
+      Forms
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#template-driven-forms" title="Template-driven Forms" class="md-nav__link">
+    Template-driven Forms
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ngmodelgroup" title="ngModelGroup" class="md-nav__link">
+    ngModelGroup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#template-driven-validation" title="Template-driven validation" class="md-nav__link">
+    Template-driven validation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reactive-forms" title="Reactive Forms" class="md-nav__link">
+    Reactive Forms
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#essential-form-classes" title="Essential form classes" class="md-nav__link">
+    Essential form classes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#introduction-to-formbuilder" title="Introduction to FormBuilder" class="md-nav__link">
+    Introduction to FormBuilder
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nested-formgroups" title="Nested FormGroups" class="md-nav__link">
+    Nested FormGroups
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#populate-the-form-model-with-setvalue-and-patchvalue" title="Populate the form model with setValue and patchValue" class="md-nav__link">
+    Populate the form model with setValue and patchValue
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setvalue" title="setValue" class="md-nav__link">
+    setValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patchvalue" title="patchValue" class="md-nav__link">
+    patchValue
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../angular-cli/" title="Angular CLI" class="md-nav__link">
+      Angular CLI
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../3rd-party/" title="3rd Party Library Installation" class="md-nav__link">
+      3rd Party Library Installation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../misc/" title="Miscellaneous" class="md-nav__link">
+      Miscellaneous
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#template-driven-forms" title="Template-driven Forms" class="md-nav__link">
+    Template-driven Forms
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ngmodelgroup" title="ngModelGroup" class="md-nav__link">
+    ngModelGroup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#template-driven-validation" title="Template-driven validation" class="md-nav__link">
+    Template-driven validation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reactive-forms" title="Reactive Forms" class="md-nav__link">
+    Reactive Forms
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#essential-form-classes" title="Essential form classes" class="md-nav__link">
+    Essential form classes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#introduction-to-formbuilder" title="Introduction to FormBuilder" class="md-nav__link">
+    Introduction to FormBuilder
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nested-formgroups" title="Nested FormGroups" class="md-nav__link">
+    Nested FormGroups
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#populate-the-form-model-with-setvalue-and-patchvalue" title="Populate the form model with setValue and patchValue" class="md-nav__link">
+    Populate the form model with setValue and patchValue
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setvalue" title="setValue" class="md-nav__link">
+    setValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patchvalue" title="patchValue" class="md-nav__link">
+    patchValue
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Forms</h1>
+                
+                <h2 id="template-driven-forms">Template-driven Forms</h2>
+<p>Template-driven forms allow you to build the form on the HTML template. </p>
+<p>You place HTML form controls (such as <code>&lt;input&gt;</code> and <code>&lt;select&gt;</code>) in the component template and bind them to data model properties in the component, using directives like <code>ngModel</code>.</p>
+<p>You don't create Angular form control objects. Angular directives create them for you, using the information in your data bindings. You don't push and pull data values. Angular handles that for you with <code>ngModel</code>. Angular updates the mutable data model with user changes as they happen.</p>
+<p>An Angular form has two parts: an HTML-based template and a component class to handle data and user interactions programmatically. </p>
+<div class="filename">src/app/hero-form.component.ts</div>
+
+<div class="codehilite"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">Hero</span> <span class="p">}</span>    <span class="nx">from</span> <span class="s1">&#39;./hero&#39;</span><span class="p">;</span>
+
+<span class="kd">@Component</span><span class="p">({</span>
+  <span class="nx">selector</span><span class="o">:</span> <span class="s1">&#39;hero-form&#39;</span><span class="p">,</span>
+  <span class="nx">templateUrl</span><span class="o">:</span> <span class="s1">&#39;./hero-form.component.html&#39;</span>
+<span class="p">})</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">HeroFormComponent</span> <span class="p">{</span>
+
+  <span class="nx">powers</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Really Smart&#39;</span><span class="p">,</span> <span class="s1">&#39;Super Flexible&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;Super Hot&#39;</span><span class="p">,</span> <span class="s1">&#39;Weather Changer&#39;</span><span class="p">];</span>
+
+  <span class="nx">model</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Hero</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="s1">&#39;Dr IQ&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">powers</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;Chuck Overstreet&#39;</span><span class="p">);</span>
+
+  <span class="nx">submitted</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+  <span class="nx">onSubmit</span><span class="p">(</span><span class="nx">formValues</span><span class="p">)</span> <span class="p">{</span> 
+    <span class="k">this</span><span class="p">.</span><span class="nx">submitted</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">formValues</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="c1">// TODO: Remove this when we&#39;re done</span>
+  <span class="nx">get</span> <span class="nx">diagnostic() {</span> <span class="k">return</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">model</span><span class="p">);</span> <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Because template-driven forms are in their own module, you need to add the <code>FormsModule</code> to the array of <code>imports</code> for the application module before you can use forms.</p>
+<div class="filename">src/app/app.module.ts</div>
+
+<div class="codehilite"><pre><span></span><span class="p">...</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">FormsModule</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/forms&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">HeroFormComponent</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./hero-form.component&#39;</span><span class="p">;</span>
+
+<span class="kd">@NgModule</span><span class="p">({</span>
+  <span class="nx">imports</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">...</span>
+    <span class="nx">FormsModule</span>
+  <span class="p">],</span>
+  <span class="nx">declarations</span><span class="o">:</span> <span class="p">[</span>
+    <span class="nx">AppComponent</span><span class="p">,</span>
+    <span class="nx">HeroFormComponent</span>
+  <span class="p">]</span>
+  <span class="p">...</span>
+<span class="p">})</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">AppModule</span> <span class="p">{</span> <span class="p">}</span>
+</pre></div>
+
+
+<div class="filename">hero-form.component.html</div>
+
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hero Form<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="hll">  <span class="p">&lt;</span><span class="nt">form</span> <span class="err">#</span><span class="na">heroForm</span><span class="o">=</span><span class="s">&quot;ngForm&quot;</span> <span class="err">(</span><span class="na">ngSubmit</span><span class="err">)=&quot;</span><span class="na">onSubmit</span><span class="err">(</span><span class="na">heroForm</span><span class="err">.</span><span class="na">value</span><span class="err">)&quot;</span><span class="p">&gt;</span>    
+</span>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-group&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;name&quot;</span><span class="p">&gt;</span>Name<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-control&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;name&quot;</span>
+            <span class="na">required</span>
+<span class="hll">            <span class="err">[(</span><span class="na">ngModel</span><span class="err">)]=&quot;</span><span class="na">model</span><span class="err">.</span><span class="na">name</span><span class="err">&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;name&quot;</span><span class="p">&gt;</span>
+</span>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-group&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;alterEgo&quot;</span><span class="p">&gt;</span>Alter Ego<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span>  <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-control&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;alterEgo&quot;</span>
+            <span class="err">[(</span><span class="na">ngModel</span><span class="err">)]=&quot;</span><span class="na">model</span><span class="err">.</span><span class="na">alterEgo</span><span class="err">&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;alterEgo&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-group&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;power&quot;</span><span class="p">&gt;</span>Hero Power<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">select</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-control&quot;</span>  <span class="na">id</span><span class="o">=</span><span class="s">&quot;power&quot;</span>
+              <span class="na">required</span>
+              <span class="err">[(</span><span class="na">ngModel</span><span class="err">)]=&quot;</span><span class="na">model</span><span class="err">.</span><span class="na">power</span><span class="err">&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;power&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">option</span> <span class="err">*</span><span class="na">ngFor</span><span class="o">=</span><span class="s">&quot;let pow of powers&quot;</span> <span class="err">[</span><span class="na">value</span><span class="err">]=&quot;</span><span class="na">pow</span><span class="err">&quot;</span><span class="p">&gt;</span>{{pow}}<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn btn-success&quot;</span>
+      <span class="err">[</span><span class="na">disabled</span><span class="err">]=&quot;!</span><span class="na">heroForm</span><span class="err">.</span><span class="na">form</span><span class="err">.</span><span class="na">valid</span><span class="err">&quot;</span><span class="p">&gt;</span>Submit<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+  {{diagnostic}}
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<p>In template driven forms, if you've imported <code>FormsModule</code>, you don't have to do anything to the <code>&lt;form&gt;</code> tag in order to make use of <code>FormsModule</code>. Continue on to see how this works.</p>
+<p>The variable <code>heroForm</code> is now a reference to the <code>NgForm</code> directive that governs the form as a whole.</p>
+<div class="admonition note">
+<p class="admonition-title">The NgForm directive</p>
+<p>The NgForm directive supplements the form element with additional features. It holds the controls you created for the elements with an <code>ngModel</code> directive and <code>name</code> attribute, and monitors their properties, including their validity. It also has its own valid property which is true only if every contained control is valid.</p>
+</div>
+<p>Notice that you also added a <code>name</code> attribute to the <code>&lt;input&gt;</code> tag and set it to "name", which makes sense for the hero's name. Any unique value will do, but using a descriptive name is helpful. Defining a <code>name</code> attribute is a requirement when using <code>[(ngModel)]</code> in combination with a form.</p>
+<div class="admonition note">
+<p>Internally, Angular creates <code>FormControl</code> instances and registers them with an <code>NgForm</code> directive that Angular attached to the <code>&lt;form&gt;</code> tag. Each <code>FormControl</code> is registered under the name you assigned to the <code>name</code> attribute.</p>
+</div>
+<h3 id="ngmodelgroup">ngModelGroup</h3>
+<p>Creates and binds a <code>FormGroup</code> instance to a DOM element.</p>
+<p>This directive can only be used as a child of <code>NgForm</code> (or in other words,
+within <code>&lt;form&gt;</code> tags).</p>
+<p>Use this directive if you'd like to create a sub-group within a form. This can
+come in handy if you want to validate a sub-group of your form separately from
+the rest of your form, or if some values in your domain model make more sense to
+consume together in a nested object.</p>
+<p>Pass in the name you'd like this sub-group to have and it will become the key
+for the sub-group in the form's full value. You can also export the directive into
+a local template variable using <code>ngModelGroup</code> (ex: <code>#myGroup="ngModelGroup"</code>).</p>
+<div class="codehilite"><pre><span></span><span class="kr">import</span> <span class="p">{</span><span class="nx">Component</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span><span class="nx">NgForm</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/forms&#39;</span><span class="p">;</span>
+
+<span class="kd">@Component</span><span class="p">({</span>
+  <span class="nx">selector</span><span class="o">:</span> <span class="s1">&#39;example-app&#39;</span><span class="p">,</span>
+  <span class="nx">template</span><span class="o">:</span> <span class="sb">`</span>
+<span class="sb">    &lt;form #f=&quot;ngForm&quot; (ngSubmit)=&quot;onSubmit(f)&quot;&gt;</span>
+<span class="sb">      &lt;p *ngIf=&quot;nameCtrl.invalid&quot;&gt;Name is invalid.&lt;/p&gt;</span>
+
+<span class="sb">      &lt;div ngModelGroup=&quot;name&quot; #nameCtrl=&quot;ngModelGroup&quot;&gt;</span>
+<span class="sb">        &lt;input name=&quot;first&quot; [ngModel]=&quot;name.first&quot; minlength=&quot;2&quot;&gt;</span>
+<span class="sb">        &lt;input name=&quot;last&quot; [ngModel]=&quot;name.last&quot; required&gt;</span>
+<span class="sb">      &lt;/div&gt;</span>
+
+<span class="sb">      &lt;input name=&quot;email&quot; ngModel&gt; </span>
+<span class="sb">      &lt;button&gt;Submit&lt;/button&gt;</span>
+<span class="sb">    &lt;/form&gt;</span>
+
+<span class="sb">    &lt;button (click)=&quot;setValue()&quot;&gt;Set value&lt;/button&gt;</span>
+<span class="sb">  `</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">NgModelGroupComp</span> <span class="p">{</span>
+  <span class="nx">name</span> <span class="o">=</span> <span class="p">{</span><span class="nx">first</span><span class="o">:</span> <span class="s1">&#39;Nancy&#39;</span><span class="p">,</span> <span class="nx">last</span><span class="o">:</span> <span class="s1">&#39;Drew&#39;</span><span class="p">};</span>
+
+  <span class="nx">onSubmit</span><span class="p">(</span><span class="nx">f</span>: <span class="kt">NgForm</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">f</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>  <span class="c1">// {name: {first: &#39;Nancy&#39;, last: &#39;Drew&#39;}, email: &#39;&#39;}</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">f</span><span class="p">.</span><span class="nx">valid</span><span class="p">);</span>  <span class="c1">// true</span>
+  <span class="p">}</span>
+
+  <span class="nx">setValue() {</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="p">{</span><span class="nx">first</span><span class="o">:</span> <span class="s1">&#39;Bess&#39;</span><span class="p">,</span> <span class="nx">last</span><span class="o">:</span> <span class="s1">&#39;Marvin&#39;</span><span class="p">};</span> <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3 id="template-driven-validation">Template-driven validation</h3>
+<p>To add validation to a template-driven form, you add the same validation attributes as you
+would with <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">native HTML form validation</a>.
+Angular uses directives to match these attributes with validator functions in the framework.</p>
+<p>You can then inspect the control's state by exporting <code>ngModel</code> to a local template variable.
+The following example exports <code>NgModel</code> into a variable called <code>name</code>:</p>
+<div class="filename">template/hero-form-template.component.html (name)</div>
+
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;name&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;name&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-control&quot;</span>
+       <span class="na">required</span> <span class="na">minlength</span><span class="o">=</span><span class="s">&quot;4&quot;</span> <span class="na">forbiddenName</span><span class="o">=</span><span class="s">&quot;bob&quot;</span>
+<span class="hll">       <span class="err">[(</span><span class="na">ngModel</span><span class="err">)]=&quot;</span><span class="na">hero</span><span class="err">.</span><span class="na">name</span><span class="err">&quot;</span> <span class="err">#</span><span class="na">name</span><span class="o">=</span><span class="s">&quot;ngModel&quot;</span> <span class="p">&gt;</span>
+</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="err">*</span><span class="na">ngIf</span><span class="o">=</span><span class="s">&quot;name.invalid &amp;&amp; (name.dirty || name.touched)&quot;</span>
+     <span class="na">class</span><span class="o">=</span><span class="s">&quot;alert alert-danger&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="err">*</span><span class="na">ngIf</span><span class="o">=</span><span class="s">&quot;name.errors.required&quot;</span><span class="p">&gt;</span>
+    Name is required.
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="err">*</span><span class="na">ngIf</span><span class="o">=</span><span class="s">&quot;name.errors.minlength&quot;</span><span class="p">&gt;</span>
+    Name must be at least 4 characters long.
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="err">*</span><span class="na">ngIf</span><span class="o">=</span><span class="s">&quot;name.errors.forbiddenName&quot;</span><span class="p">&gt;</span>
+    Name cannot be Bob.
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<div class="admonition note">
+<p class="admonition-title">Why check <em>dirty</em> and <em>touched</em>?</p>
+<p>You may not want your application to display errors before the user has a chance to edit the form.
+The checks for <code>dirty</code> and <code>touched</code> prevent errors from showing until the user
+does one of two things: changes the value,
+turning the control dirty; or blurs the form control element, setting the control to touched.</p>
+</div>
+<h2 id="reactive-forms">Reactive Forms</h2>
+<p>Angular <em>reactive</em> forms facilitate a <em>reactive style</em> of programming
+that favors explicit management of the data flowing between
+a non-UI <em>data model</em> (typically retrieved from a server) and a
+UI-oriented <em>form model</em> that retains the states
+and values of the HTML controls on screen. Reactive forms offer the ease
+of using reactive patterns, testing, and validation.</p>
+<p>With <em>reactive</em> forms, you create a tree of Angular form control objects
+in the component class and bind them to native form control elements in the
+component template, using techniques described below.</p>
+<div class="filename">src/app/hero-detail.component.ts</div>
+
+<div class="codehilite"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span>   <span class="nx">from</span> <span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">FormControl</span><span class="p">,</span> <span class="nx">FormGroup</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/forms&#39;</span><span class="p">;</span>
+
+<span class="kd">@Component</span><span class="p">({</span>
+  <span class="nx">selector</span><span class="o">:</span> <span class="s1">&#39;hero-detail&#39;</span><span class="p">,</span>
+  <span class="nx">templateUrl</span><span class="o">:</span> <span class="s1">&#39;./hero-detail.component.html&#39;</span>
+<span class="p">})</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">HeroDetailComponent</span> <span class="p">{</span>
+<span class="hll">  <span class="nx">heroForm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FormGroup</span> <span class="p">({</span>
+</span><span class="hll">    <span class="nx">name</span>: <span class="kt">new</span> <span class="nx">FormControl</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="nx">Validators</span><span class="p">.</span><span class="nx">required</span><span class="p">)</span>
+</span>  <span class="p">});</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>A <code>FormControl</code> constructor accepts three, optional arguments: the initial data value, an array of validators, and an array of async validators.</p>
+<div class="filename">src/app/hero-detail.component.html</div>
+
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Hero Detail<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;&lt;</span><span class="nt">i</span><span class="p">&gt;</span>FormControl in a FormGroup<span class="p">&lt;/</span><span class="nt">i</span><span class="p">&gt;&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<span class="hll"><span class="p">&lt;</span><span class="nt">form</span> <span class="err">[</span><span class="na">formGroup</span><span class="err">]=&quot;</span><span class="na">heroForm</span><span class="err">&quot;</span> <span class="na">novalidate</span><span class="p">&gt;</span>
+</span>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-group&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;center-block&quot;</span><span class="p">&gt;</span>Name:
+<span class="hll">      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-control&quot;</span> <span class="na">formControlName</span><span class="o">=</span><span class="s">&quot;name&quot;</span><span class="p">&gt;</span>
+</span>    <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<div class="filename">src/app/app.module.ts</div>
+
+<div class="codehilite"><pre><span></span><span class="p">...</span>
+<span class="hll"><span class="kr">import</span> <span class="p">{</span> <span class="nx">ReactiveFormsModule</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/forms&#39;</span><span class="p">;</span> 
+</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">AppComponent</span> <span class="p">}</span>        <span class="nx">from</span> <span class="s1">&#39;./app.component&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">HeroDetailComponent</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./hero-detail.component&#39;</span><span class="p">;</span>
+
+<span class="kd">@NgModule</span><span class="p">({</span>
+  <span class="nx">imports</span><span class="o">:</span> <span class="p">[</span>
+    <span class="nx">BrowserModule</span><span class="p">,</span>
+<span class="hll">    <span class="nx">ReactiveFormsModule</span>
+</span>  <span class="p">],</span>
+  <span class="nx">declarations</span><span class="o">:</span> <span class="p">[</span>
+    <span class="nx">AppComponent</span><span class="p">,</span>
+    <span class="nx">HeroDetailComponent</span><span class="p">,</span>
+  <span class="p">],</span>
+  <span class="nx">bootstrap</span><span class="o">:</span> <span class="p">[</span> <span class="nx">AppComponent</span> <span class="p">]</span>
+<span class="p">})</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">AppModule</span> <span class="p">{</span> <span class="p">}</span>
+</pre></div>
+
+
+<h3 id="essential-form-classes">Essential form classes</h3>
+<ul>
+<li>
+<p><strong><em>AbstractControl</em></strong> is the abstract base class for the three concrete form control classes: <code>FormControl</code>, <code>FormGroup</code>, and <code>FormArray</code>. It provides their common behaviors and properties, some of which are <em>observable</em>.</p>
+</li>
+<li>
+<p><strong><em>FormControl</em></strong> tracks the value and validity status of an <em>individual</em> form control. It corresponds to an HTML form control such as an input box or selector.</p>
+</li>
+<li>
+<p><strong><em>FormGroup</em></strong> tracks the value and validity state of a <em>group</em> of <code>AbstractControl</code> instances. The group's properties include its child controls.
+    The top-level form in your component is a <code>FormGroup</code>.</p>
+</li>
+<li>
+<p><strong><em>FormArray</em></strong> tracks the value and validity state of a numerically indexed <em>array</em> of <code>AbstractControl</code> instances.</p>
+</li>
+</ul>
+<h3 id="introduction-to-formbuilder">Introduction to <em>FormBuilder</em></h3>
+<p>The <code>FormBuilder</code> class helps reduce repetition and clutter by handling details of control creation for you.</p>
+<div class="filename">src/app/hero-detail.component.ts</div>
+
+<div class="codehilite"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">Component</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">FormBuilder</span><span class="p">,</span> <span class="nx">FormGroup</span><span class="p">,</span> <span class="nx">Validators</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/forms&#39;</span><span class="p">;</span>
+
+<span class="kd">@Component</span><span class="p">({</span>
+  <span class="nx">selector</span><span class="o">:</span> <span class="s1">&#39;hero-detail&#39;</span><span class="p">,</span>
+  <span class="nx">templateUrl</span><span class="o">:</span> <span class="s1">&#39;./hero-detail.component.html&#39;</span>
+<span class="p">})</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">HeroDetailComponent3</span> <span class="p">{</span>
+  <span class="nx">heroForm</span>: <span class="kt">FormGroup</span><span class="p">;</span>
+
+<span class="hll">  <span class="kr">constructor</span><span class="p">(</span><span class="kr">private</span> <span class="nx">fb</span>: <span class="kt">FormBuilder</span><span class="p">)</span> <span class="p">{</span>
+</span>    <span class="k">this</span><span class="p">.</span><span class="nx">createForm</span><span class="p">();</span>
+  <span class="p">}</span>
+
+  <span class="nx">createForm() {</span>
+<span class="hll">    <span class="k">this</span><span class="p">.</span><span class="nx">heroForm</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">fb</span><span class="p">.</span><span class="nx">group</span><span class="p">({</span>
+</span>      <span class="nx">name</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="nx">Validators</span><span class="p">.</span><span class="nx">required</span> <span class="p">],</span> 
+    <span class="p">});</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h4 id="nested-formgroups">Nested FormGroups</h4>
+<p>You can group some of the related <code>FormControls</code> into a nested <code>FormGroup</code>. The <code>street</code>, <code>city</code>, <code>state</code>, and <code>zip</code> are properties that would make a good <em>address</em> <code>FormGroup</code>. Nesting groups and controls in this way allows you to
+mirror the hierarchical structure of the data model and helps track validation and state for related sets of controls.</p>
+<div class="filename">src/app/hero-detail.component.ts</div>
+
+<div class="codehilite"><pre><span></span><span class="kr">export</span> <span class="kr">class</span> <span class="nx">HeroDetailComponent5</span> <span class="p">{</span>
+  <span class="nx">heroForm</span>: <span class="kt">FormGroup</span><span class="p">;</span>
+  <span class="nx">states</span> <span class="o">=</span> <span class="nx">states</span><span class="p">;</span>
+
+  <span class="kr">constructor</span><span class="p">(</span><span class="kr">private</span> <span class="nx">fb</span>: <span class="kt">FormBuilder</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">createForm</span><span class="p">();</span>
+  <span class="p">}</span>
+
+  <span class="nx">createForm() {</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">heroForm</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">fb</span><span class="p">.</span><span class="nx">group</span><span class="p">({</span> <span class="c1">// &lt;-- the parent FormGroup</span>
+      <span class="nx">name</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="nx">Validators</span><span class="p">.</span><span class="nx">required</span> <span class="p">],</span>
+      <span class="nx">address</span>: <span class="kt">this.fb.group</span><span class="p">({</span> <span class="c1">// &lt;-- the child FormGroup</span>
+        <span class="nx">street</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+        <span class="nx">city</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+        <span class="nx">state</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+        <span class="nx">zip</span><span class="o">:</span> <span class="s1">&#39;&#39;</span>
+      <span class="p">}),</span>
+      <span class="nx">power</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+      <span class="nx">sidekick</span><span class="o">:</span> <span class="s1">&#39;&#39;</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<div class="filename">src/app/hero-detail.component.html</div>
+
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Hero Detail<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;&lt;</span><span class="nt">i</span><span class="p">&gt;</span>A FormGroup with multiple FormControls<span class="p">&lt;/</span><span class="nt">i</span><span class="p">&gt;&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">form</span> <span class="err">[</span><span class="na">formGroup</span><span class="err">]=&quot;</span><span class="na">heroForm</span><span class="err">&quot;</span> <span class="na">novalidate</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-group&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;center-block&quot;</span><span class="p">&gt;</span>Name:
+      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-control&quot;</span> <span class="na">formControlName</span><span class="o">=</span><span class="s">&quot;name&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="hll">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">formGroupName</span><span class="o">=</span><span class="s">&quot;address&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;well well-lg&quot;</span><span class="p">&gt;</span>
+</span>    <span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>Secret Lair<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-group&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;center-block&quot;</span><span class="p">&gt;</span>Street:
+        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-control&quot;</span> <span class="na">formControlName</span><span class="o">=</span><span class="s">&quot;street&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-group&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;center-block&quot;</span><span class="p">&gt;</span>City:
+        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-control&quot;</span> <span class="na">formControlName</span><span class="o">=</span><span class="s">&quot;city&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-group&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;center-block&quot;</span><span class="p">&gt;</span>State:
+        <span class="p">&lt;</span><span class="nt">select</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-control&quot;</span> <span class="na">formControlName</span><span class="o">=</span><span class="s">&quot;state&quot;</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">option</span> <span class="err">*</span><span class="na">ngFor</span><span class="o">=</span><span class="s">&quot;let state of states&quot;</span> <span class="err">[</span><span class="na">value</span><span class="err">]=&quot;</span><span class="na">state</span><span class="err">&quot;</span><span class="p">&gt;</span>{{state}}<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-group&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;center-block&quot;</span><span class="p">&gt;</span>Zip Code:
+        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-control&quot;</span> <span class="na">formControlName</span><span class="o">=</span><span class="s">&quot;zip&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-group radio&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>Super power:<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;center-block&quot;</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">formControlName</span><span class="o">=</span><span class="s">&quot;power&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;flight&quot;</span><span class="p">&gt;</span>Flight<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;center-block&quot;</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">formControlName</span><span class="o">=</span><span class="s">&quot;power&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;x-ray vision&quot;</span><span class="p">&gt;</span>X-ray vision<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;center-block&quot;</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">formControlName</span><span class="o">=</span><span class="s">&quot;power&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;strength&quot;</span><span class="p">&gt;</span>Strength<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;center-block&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">formControlName</span><span class="o">=</span><span class="s">&quot;sidekick&quot;</span><span class="p">&gt;</span>I have a sidekick.
+    <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<h3 id="populate-the-form-model-with-setvalue-and-patchvalue">Populate the form model with setValue and patchValue</h3>
+<h4 id="setvalue"><em>setValue</em></h4>
+<p>With <strong><code>setValue</code></strong>, you assign <em>every</em> form control value <em>at once</em> by passing in a data object whose properties exactly match the <em>form model</em> behind the <code>FormGroup</code>.</p>
+<div class="filename">src/app/hero-detail.component.ts</div>
+
+<div class="codehilite"><pre><span></span><span class="k">this</span><span class="p">.</span><span class="nx">heroForm</span><span class="p">.</span><span class="nx">setValue</span><span class="p">({</span>
+  <span class="nx">name</span>:    <span class="kt">this.hero.name</span><span class="p">,</span>
+  <span class="nx">address</span>: <span class="kt">this.hero.addresses</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">||</span> <span class="k">new</span> <span class="nx">Address</span><span class="p">()</span>
+<span class="p">});</span>
+</pre></div>
+
+
+<p>The <code>setValue</code> method checks the data object thoroughly before assigning any form control values.</p>
+<p>It will not accept a data object that doesn't match the FormGroup structure or is
+missing values for any control in the group. This way, it can return helpful
+error messages if you have a typo or if you've nested controls incorrectly.
+<code>patchValue</code> will fail silently.</p>
+<p>On the other hand,<code>setValue</code> will catch the error and report it clearly.</p>
+<h4 id="patchvalue"><em>patchValue</em></h4>
+<p>With <strong><code>patchValue</code></strong>, you can assign values to specific controls in a <code>FormGroup</code>
+by supplying an object of key/value pairs for just the controls of interest.</p>
+<p>This example sets only the form's <code>name</code> control.</p>
+<div class="filename">src/app/hero-detail.component.ts</div>
+
+<div class="codehilite"><pre><span></span><span class="k">this</span><span class="p">.</span><span class="nx">heroForm</span><span class="p">.</span><span class="nx">patchValue</span><span class="p">({</span>
+  <span class="nx">name</span>: <span class="kt">this.hero.name</span>
+<span class="p">});</span>
+</pre></div>
+
+
+<p>With <strong><code>patchValue</code></strong> you have more flexibility to cope with wildly divergent data and form models. But unlike <code>setValue</code>,  <code>patchValue</code> cannot check for missing control values and does not throw helpful errors.</p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../routing/" title="Routing & Navigation" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Routing & Navigation
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../angular-cli/" title="Angular CLI" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Angular CLI
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application-1d6ee6ee6c.js"></script>
+      
+      
+      <script>app.initialize({url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
