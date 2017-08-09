@@ -2,8 +2,13 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Angular Cheat Sheet", 
+            "text": "Angular Extended Cheat Sheet", 
             "title": "Home"
+        }, 
+        {
+            "location": "/#angular-extended-cheat-sheet", 
+            "text": "", 
+            "title": "Angular Extended Cheat Sheet"
         }, 
         {
             "location": "/component/", 
