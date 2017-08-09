@@ -1,0 +1,36 @@
+site_name: Angular Extended Cheat Sheet
+extra:
+  logo: 'img/angular.svg'
+theme_dir: 'mkdocs-material/material'
+theme: 'material'
+extra:
+  palette:
+    primary: 'red'
+    accent: 'red'
+markdown_extensions:
+  - admonition
+  - codehilite
+extra_css:
+  - 'stylesheets/extra.css'
+pages:
+  - Home: index.md
+  - "@Component": component.md
+  - "@ngModule(s)": ngModules.md
+  - "Built-in Directives": built-in-directives.md
+  - "Template Syntax": template-syntax.md
+  - Pipes: pipes.md
+  - Interfaces: interfaces.md
+  - Lifecycle Hooks: lifecycle-hooks.md
+  - Class field decorators: class-field-decorators.md
+  - Communicating Between Components: communicating-btw-components.md
+  - Services and Dependency Injection: services.md
+  - Getting Data With HTTP: http.md
+  - "Routing & Navigation": routing.md
+  - Forms: forms.md
+  - Angular CLI: angular-cli.md
+  - 3rd Party Library Installation : 3rd-party.md
+  - Miscellaneous : misc.md
+
+
+
+
