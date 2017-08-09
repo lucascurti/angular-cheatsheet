@@ -1,9 +1,9 @@
 site_name: Angular Extended Cheat Sheet
-extra:
-  logo: 'img/angular.svg'
+site_favicon: 'img/favicon-32x32.png'
 theme_dir: 'mkdocs-material/material'
 theme: 'material'
 extra:
+  logo: 'img/angular.svg'
   palette:
     primary: 'red'
     accent: 'red'
