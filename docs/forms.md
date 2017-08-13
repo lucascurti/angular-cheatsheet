@@ -106,6 +106,12 @@ Notice that you also added a `name` attribute to the `<input>` tag and set it to
 !!! note ""
     Internally, Angular creates `FormControl` instances and registers them with an `NgForm` directive that Angular attached to the `<form>` tag. Each `FormControl` is registered under the name you assigned to the `name` attribute.
 
+### ngValue
+
+If your option values are simple strings, you can bind to the normal `value` property
+on the option.  If your option values happen to be objects (and you'd like to save the
+selection in your form as an object), use `ngValue` instead:
+
 ### ngModelGroup
 
 Creates and binds a `FormGroup` instance to a DOM element.

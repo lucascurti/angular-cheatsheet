@@ -21,6 +21,10 @@ If it is necessary to display a template when the `expression` is falsy use the 
 ```
 `NgFor` is a _repeater_ directive — a way to present a list of items. You define a block of HTML that defines how a single item should be displayed. You tell Angular to use that block as a template for rendering each item in the list.
 
+To customize the default tracking algorithm, `NgForOf` supports `trackBy` option.
+`trackBy` takes a function which has two arguments: `index` and `item`.
+If `trackBy` is given, Angular tracks changes by the return value of the function. It's useful for improving performance on long lists.
+
 ### NgSwitch
 ```html
 <div [ngSwitch]="currentHero.emotion">
