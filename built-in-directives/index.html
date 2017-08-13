@@ -554,6 +554,9 @@
 
 
 <p><code>NgFor</code> is a <em>repeater</em> directive — a way to present a list of items. You define a block of HTML that defines how a single item should be displayed. You tell Angular to use that block as a template for rendering each item in the list.</p>
+<p>To customize the default tracking algorithm, <code>NgForOf</code> supports <code>trackBy</code> option.
+<code>trackBy</code> takes a function which has two arguments: <code>index</code> and <code>item</code>.
+If <code>trackBy</code> is given, Angular tracks changes by the return value of the function. It's useful for improving performance on long lists.</p>
 <h3 id="ngswitch">NgSwitch</h3>
 <div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="err">[</span><span class="na">ngSwitch</span><span class="err">]=&quot;</span><span class="na">currentHero</span><span class="err">.</span><span class="na">emotion</span><span class="err">&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">happy-hero</span>    <span class="err">*</span><span class="na">ngSwitchCase</span><span class="o">=</span><span class="s">&quot;&#39;happy&#39;&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">happy-hero</span><span class="p">&gt;</span>

@@ -328,6 +328,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#ngvalue" title="ngValue" class="md-nav__link">
+    ngValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ngmodelgroup" title="ngModelGroup" class="md-nav__link">
     ngModelGroup
   </a>
@@ -483,6 +490,13 @@
   
     <nav class="md-nav">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ngvalue" title="ngValue" class="md-nav__link">
+    ngValue
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#ngmodelgroup" title="ngModelGroup" class="md-nav__link">
@@ -688,6 +702,10 @@
 <div class="admonition note">
 <p>Internally, Angular creates <code>FormControl</code> instances and registers them with an <code>NgForm</code> directive that Angular attached to the <code>&lt;form&gt;</code> tag. Each <code>FormControl</code> is registered under the name you assigned to the <code>name</code> attribute.</p>
 </div>
+<h3 id="ngvalue">ngValue</h3>
+<p>If your option values are simple strings, you can bind to the normal <code>value</code> property
+on the option.  If your option values happen to be objects (and you'd like to save the
+selection in your form as an object), use <code>ngValue</code> instead:</p>
 <h3 id="ngmodelgroup">ngModelGroup</h3>
 <p>Creates and binds a <code>FormGroup</code> instance to a DOM element.</p>
 <p>This directive can only be used as a child of <code>NgForm</code> (or in other words,
